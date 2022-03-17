@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- USED STYLES -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- FONTS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900">
+    <!-- BOOTSTRAP -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <title>Tiendita</title>
+</head>
+<body>
+    <header class="header-bar f-w">
+        <h1 class="f-h">Tiendita</h1>
+        <div>
+            <div class="location-header" >
+                <img class="img1" src="images/location.svg" alt="">
+                <a class="address w-b clickable" href="#modal-address">Añade una direccion</a>
+            </div>
+            <div class="as-c">
+                <a id="shop" class="flex btn-add btn-shop" href="#modal-cart"><img class="quantity-cart" src="images/cart.svg" alt=""><span class="quantity-cart-number as-c">0</span></a>
+            </div>
+        </div>
+    </header>
+    <div class="mainSlider flex column banner-section">
+        <div class="banner">
+            <!-- <img class="imgbanner" src="images/Banner.png" alt=""> -->
+            <p class="slogan">¡Adquiere todos tus productos favoritos al mejor precio!</p>
+        </div>
+        <!-- SLIDER 1-->
+        <div class="slider">
+            <h4>Ofertas</h4>
+            <div class="products-slider jc-se productSlider1 f-w">
+            </div>
+            <div id="left-ofertas" class="btn-slider-left ai-c">&lt</div>
+            <div id="right-ofertas" class="btn-slider-right ai-c">&gt</div>
+        </div>
+        
+        <!-- SLIDER 2-->
+        <div class="slider f-w">
+            <h4>Los más populares</h4>
+            <div class="products-slider jc-se productSlider2 f-w">
+            </div>
+            <div id="left-populares" class="btn-slider-left ai-c">&lt</div>
+            <div id="right-populares" class="btn-slider-right ai-c">&gt</div>
+        </div>
+
+    </div>
+    <!-- MODALES -->
+    <!-- First Modal-->
+    <div id="modal-address" class="modal flex address">
+        <div class="modal-window column">
+            <a class="close-modal as-e" href="#"><img src="./images/cancel.png" alt=""></a>
+            <h2 class="s-xxl w-sb">¿Dónde quieres recibir tu pedido?</h2>
+            <p>Para poder ofrecerte mas productos dentro de tu area, necesitamos tu dirección</p>
+            <div class = "box-direction as-sh">
+                <img class="imgmodal1 js-star" src="images/location.svg" alt="">
+                <input type="text" class="address-input bn js-sh fg-1" placeholder="Ingresa tu direccion">
+            </div>
+            <button class="search-btn" disabled>Buscar</button>
+        </div>
+    </div>
+    <!-- Second Modal-->
+    <div id="modal-card" class="modal flex">
+        <div class="modal-window column">
+            <a class="close-modal as-e" href="#"><img src="./images/cancel.png" alt=""></a>
+            <div class = "product-card-main f-w">
+            </div>
+            <div class="slider producSlider3main ji-c">
+                <h4>Productos relacionados</h4>
+                <div class="products-slider productSlider3 f-w jc-c">
+                </div>
+                <div id="left-modal" class="btn-slider-left ai-c">&lt</div>
+                <div id="right-modal" class="btn-slider-right ai-c">&gt</div>
+            </div>
+        </div>
+    </div>
+    <!-- Third Modal-->
+    <div id="modal-cart" class="modal flex z1">
+        <div class="modal-window-cart js-e column">
+            <div class="jc-sb">
+                <div>
+                    <i class="js-e as-c">Entregar en :</i><i class="address-cart as-c"></i>
+                </div>
+                <a class="close-modal js-e" href="#"><img src="./images/cancel.png" alt=""></a>
+            </div>
+            <div class="elements-cart-0 column jc-c"></div>
+            <div class="cart-container column jc-s"></div>
+            <div class="cart-footer jc-sb"></div>
+        </div>
+    </div>
+    <!-- Fourth Modal-->
+    <div class="modal-payment flex column z2 ps-x">
+        <div>
+            <a class="btn-goback"><img src="./images/back.png" class="as-s" alt=""><p>Volver</p></a>   
+        </div>
+        <div class="modal-window-last back-c f-w h-100 ji-sh">
+            <div class="print-products column fg-1"></div>
+            <div class="jc-c fg-1">
+                <form class="form-last column w-60 back-c">
+                    <div class="column ps-y">
+                        <p>Correo electrónico</p>
+                        <input type="email" required>
+                    </div>
+                    <div class="column ps-y">
+                        <p>Informacion de la tarjeta</p>
+                        <div>
+                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="1234 1234 1234 1234" required>
+                        </div>
+                        <input type="month" id="start"
+                        min="2022-12" placeholder="MM/YY">
+                    </div>
+                    <div class="column ps-y">
+                        <p>Nombre de la tarjeta</p>
+                        <input type="text" required>
+                    </div>
+                    <input type="submit" class="btn-add final-payment w-b" value="Pagar ">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fifth Modal-->
+    <div class="modal-message flex">
+        <img src="images/ok.svg">
+        <p class="messageSet"></p>
+    </div>
+    <!-- Sixth modal-->
+    <div id="modal-thanks" class="modal-thanks modal flex address">
+        <div class="modal-window column">
+            <img src="./images/gracias.png" alt="">
+            <p class="w-b s-xl as-c">¡Gracias por tu compra!</p>
+            <a class="final-thanks btn-add w-b">Seguir comprando</a>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script type="module" src="scripts/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    </body>
+</html>

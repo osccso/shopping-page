@@ -1,0 +1,153 @@
+//WRAPPING
+.f-w { flex-wrap: wrap;}
+
+//BORDERS
+
+.bn { border : none}
+
+// ARRANGING GRID INSIDE FLEX
+//center
+.jc-c {justify-content: center;}
+//start
+.jc-s {justify-content: start;}
+//end
+.jc-e {justify-content: end;}
+//spacebetween
+.jc-sb {justify-content: space-between;}
+//spaceevenly
+.jc-se {justify-content: space-evenly;}
+//spacearound
+.jc-sa {justify-content: space-around;}
+
+// ARRANGING ELEMENTS INSIDE GRID OF FLEX
+//stretch
+.ji-sh {justify-items: stretch;}
+//center
+.ji-c {justify-items: center;}
+//start
+.ji-s {justify-items: start;}
+//end
+.ji-e {justify-items: end;}
+
+// ARRANGING GRID INSIDE FLEX (secondary axis)
+//center
+.ac-c {align-content: center;}
+//start
+.ac-s {align-content: start;}
+//end
+.ac-e {align-content: end;}
+//spacebetween
+.ac-sb {align-content: space-between;}
+//spaceevenly
+.ac-se {align-content: space-evenly;}
+//spacearound
+.ac-sa {align-content: space-around;}
+
+// ARRANGING ELEMENTS INSIDE GRID OF FLEX
+//stretch
+.ai-sh {align-items: stretch;}
+//center
+.ai-c {align-items: center;}
+//start
+.ai-s {align-items: start;}
+//end
+.ai-e {align-items: end;}
+
+//ARRANGING ITEMS INDIVIDUALLY MAIN AXIS
+.js-c {justify-self: center;}
+.js-s {justify-self: start;}
+.js-e {justify-self: end;}
+.js-sh {justify-self: stretch;}
+//ARRANGING ITEMS INDIVIDUALLY SECONDARY AXIS
+.as-c {align-self: center;}
+.as-s {align-self: start;}
+.as-e {align-self: end;}
+.as-sh {align-self: stretch;}
+// // TEXT STYLES AND DECORATIONS
+.f-h {line-height: 73%;}
+.t-d-n {text-decoration: none;}
+.t-d-o {text-decoration: overline;}
+.t-d-lt {text-decoration: line-through;}
+.t-d-u {text-decoration: underline;}
+.t-d-uo {text-decoration: underline overline;}
+
+// FONT WEIGHTS
+.w-t {font-weight: map-get($weights,"thin")}
+.w-n {font-weight: map-get($weights,"regular");}
+.w-sb {font-weight: map-get($weights,"semibold");}
+.w-b {font-weight: map-get($weights,"bold");}
+.w-ssb {font-weight: map-get($weights,"superbold");}
+//FONT SIZES
+.s-xxs {font-size: map-get($fsizes,"xx-small");}
+.s-xs {font-size: map-get($fsizes,"x-small");}
+.s-s  {font-size: map-get($fsizes,"small");}
+.s-m {font-size: map-get($fsizes,"medium");}
+.s-l {font-size: map-get($fsizes,"large");}
+.s-xl {font-size: map-get($fsizes,"x-large");}
+.s-xxl {font-size: map-get($fsizes,"xx-large");}
+
+//WIDTH PARENT ELEMENT
+
+.w-10 {width: 10%;}
+.w-20 {width: 20%;}
+.w-30 {width: 30%;}
+.w-40 {width: 40%;}
+.w-50 {width: 50%;}
+.w-60 {width: 60%;}
+.w-70 {width: 70%;}
+.w-80 {width: 80%;}
+.w-90 {width: 90%;}
+.w-100 {width: 100%;}
+
+//HEIGHT PARENT ELEMENT
+
+.h-10 {height: 10%;}
+.h-20 {height: 20%;}
+.h-30 {height: 30%;}
+.h-40 {height: 40%;}
+.h-50 {height: 50%;}
+.h-60 {height: 60%;}
+.h-70 {height: 70%;}
+.h-80 {height: 80%;}
+.h-90 {height: 90%;}
+.h-100 {height: 100%;}
+
+//growth
+.fg-0 {flex-grow: 0;}
+.fg-1 {flex-grow: 1;}
+.fg-2 {flex-grow: 2;}
+.fg-3 {flex-grow: 3;}
+
+//images
+.of-f {object-fit: fill;}
+.of-c {object-fit: contain;}
+
+//width
+.mw-50{min-width: 50%;}
+.mxw-50{max-width: 50%;}
+.mw-100 {min-width: 100%;}
+.mxw-100 {max-width: 100%;}
+
+//height
+.mh-50 {min-height: 50%;}
+.mxh-50{max-height: 50%;}
+.mh-100 {min-height: 100%;}
+.mxh-100 {max-height: 100%;}
+
+//Color
+.boulder {color: $boulder}
+.cocoa {color: $cocoa}
+
+//background
+.back-c {background-color: $background;}
+//z index
+
+.z1 {z-index: 1;}
+.z-1{z-index: -1;}
+.z0{z-index: 0;}
+.z2 {z-index: 2;}
+
+.ps-y{padding: $spacesmall 0;}
+.pm-y{padding: $spacemedium 0;}
+.ps-x{padding: 0 $spacesmall;}
+.pm-x{padding: 0 $spacemedium;}

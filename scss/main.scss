@@ -1,0 +1,366 @@
+@import './variables';
+@import './resets';
+@import './definitions';
+
+//FLEXES
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+//HEADER BAR
+
+.header-bar {
+    background-color: $white;
+    justify-content: space-between;
+    padding: $spacemedium $spacemain;
+}
+
+
+// H1 TIENDITA
+h1 {
+    font-size: map-get($fsizes, "large" );
+    color: $orange;
+    font-weight: map-get($weights, "superbold" );
+    font-style: italic;
+    font-family: "Inter";
+    align-self: center;
+}
+
+//location
+
+.location-header {
+    margin : $spacesmall $spacesmall;
+}
+
+.img1 {
+    padding: 0 $spacesmall;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.clickable:active {
+    color: darken($orange, 20%);
+}
+
+// quantity cart
+
+div > .btn-shop {
+    padding: $spacesmall $spacemedium;
+}
+
+.quantity-cart {
+    align-self: center;
+    margin: 0 $spacexsmall;
+}
+.quantity-cart-number {
+    color: $white;
+}
+
+//BANNER TOP
+
+.banner-section {
+    padding: $spacemain $spacemain;
+    width: 100%;
+}
+
+.banner {
+    width : 100%;
+    height: 20vh;
+    background-image: url("/images/Banner.png");
+    background-size: 100% 20vh;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.banner > .slogan {
+    font-size : map-get($fsizes, "large");
+    color : $white;
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+}
+
+//SLIDERS
+.discountTag {
+    background-color: rgba(240, 227, 254, 1);
+    color: rgba(94, 24, 187, 1);
+    border: none;
+    border-radius: 8px;
+    font-size : map-get($fsizes,"xx-small");
+    font-weight: map-get($weights, "semibold");
+    padding: 0 8px;
+}
+h4 {
+    align-self: start;
+    font-size: map-get($fsizes , "medium");
+    font-weight: map-get($weights , "semibold" );
+}
+
+.slider {
+    width : 100%;
+    background-color: $white;
+    flex-direction: column;
+    padding: $spacemedium;
+    border-radius: 16px;
+    margin: $spacemedium 0;
+}
+
+.btn-add {
+    border: none;
+    border-radius: 8px;
+    background-color: $malachite;
+    text-decoration: none;
+    color: $white;
+    padding: 12px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn-add:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+//BUTTONS
+.empty-cart {
+    cursor: pointer;
+}
+button {
+    background-color: $malachite;
+    color: $white;
+    text-justify: center;
+    border: none;
+    border-radius: 8px;
+    padding: $spaceusmall $spacesmall ;
+}
+
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: darken($malachite,10%);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+.btn-slider-left{
+    position: absolute;
+    z-index: 1;
+    left: $spacemedium;
+    font-size: 40px;
+    color: $boulder;
+    height: 100%;
+    cursor: pointer;
+}
+.btn-slider-right{
+    position: absolute;
+    z-index: 1;
+    right: $spacemedium;
+    font-size: 40px;
+    color: $boulder;
+    height: 100%;
+    cursor: pointer;
+}
+//MODALS
+.modal {
+    display: none;
+    position: absolute;
+    background-color: $backgroundmodal;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.modal-window {
+    background-color: white;
+    margin-top: 5%;
+    padding: $spacemain;
+    border: none;
+    border-radius: 16px;
+}
+
+.modal-window-last {
+    background-color: $background;
+    padding: $spacemedium;
+    border: none;
+    border-radius: 16px;
+}
+
+.card-cart {
+    border-bottom:1px solid $boulder;
+}
+
+.modal-window-cart {
+    position: absolute;
+    background-color: white;
+    padding: $spacemedium 0;
+    top: 0;
+    right: 0;
+    border: none;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.modal-window-cart > div {
+    padding: 0 $spacesmall;
+}
+#modal-address:target {
+    display: flex;
+    pointer-events: auto;
+    cursor: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+}
+#modal-thanks:target {
+    display: flex;
+    pointer-events: auto;
+    cursor: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    z-index: 5; 
+}
+#modal-card:target {
+    display: flex;
+    pointer-events: auto;
+    cursor: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+}
+
+#modal-cart:target {
+    display: flex;
+    pointer-events: auto;
+    cursor: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: start; 
+}
+
+.modal-payment {
+    display: none;
+    position: fixed;
+    background-color: $background;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    pointer-events: auto;
+    cursor: auto;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.modal-payment-active{
+    display: flex;
+    z-index: 2;
+}
+.modal-payment > .modal-window {
+    padding: $spacemedium;
+}
+
+.print-products {
+    border : none;
+    border-radius: 16px;
+    background-color: $white;
+}
+
+.address-input:focus {
+    outline: none;
+}
+.plusminus {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px -4px $boulder;
+}
+.btn-minus, .btn-plus {
+    background-color: $white;
+    font-size: 28px;
+    color: $cocoa;
+    font-weight: map-get($weights,"bold");
+}
+.btn-minus:hover , .btn-plus:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-goback:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-minus:active , .btn-plus:active {
+    background-color: darken($white,20%);
+}
+.box-direction {
+    margin: $spacemedium 0;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding : $spacesmall $spacemedium
+}
+.cardDescriptionContainer {
+    padding-left: $spacemedium;
+}
+.suggested-modal {
+    margin : 0 $spacesmall
+}
+.imgmodal1 {
+    margin-right: $spacemedium;
+}
+.modal-message {
+    display: none;
+    position: fixed;
+    left: $spacemain;
+    margin-top: 2*$spacemain;
+    //width: 20%;
+    padding: $spacemedium 20px;
+    transition: all 1.5s;
+    z-index: 2;
+}
+.modal-message-active {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $malachite;
+    justify-content: start;
+    border-radius: 8px;
+}
+.modal-message p{
+    font-size: 14px;
+    color: $white;
+    margin-left: $spacexmedium;
+    text-decoration: none;
+}
+.cart-container {
+    background-color: white;
+}
+.imgcart {
+    height: 2*$spacemain;
+}
+//COLORS
+
+.cocoa {color : $cocoa}
+.malachite {color : $malachite}
+.white {color : $white}
+.boulder {color : $boulder}
+.greenback {background-color : rgba(46, 126, 120, 1);}
+
+//BACKGROUNDS
+
+.b-default {background-color: $background;}
